@@ -5,11 +5,11 @@ def index(request):
 
 def usuarios(request):
     lista_usuarios = [
-        {"nome": "Williany" , "matrícula" : "2023118" , "cidade" : "Sm"},
-        {"nome": "Luna" , "matrícula" : "202311820" , "cidade" : "Sm"},
-        {"nome": "Maria" , "matrícula" : "2023118" , "cidade" : "Sm"},
-        {"nome": "João" , "matrícula" : "1456" , "cidade" : "Sm"},
-        {"nome": "Paulo" , "matrícula" : "12345" , "cidade" : "Sm"},
+        {"nome": "Williany" , "matricula" : "1234" ,"idade": 17, "cidade" : "Santa Maria"},
+        {"nome": "Luna" , "matricula" : "4321" ,"idade": 18, "cidade" : "São Tomé"},
+        {"nome": "Maria" , "matricula" : "567" ,"idade": 19, "cidade" : "Los Angeles"},
+        {"nome": "João" , "matricula" : "765" ,"idade": 14, "cidade" : "Natal"},
+        {"nome": "Paulo" , "matricula" : "890" ,"idade": 12, "cidade" : "São Paulo"},
     ]
 
     context = {
