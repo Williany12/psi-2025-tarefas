@@ -7,15 +7,15 @@
 </head>
 <body>
     <h1>Tarefas</h1>
-{% for tarefa in tarefas %}
+    {% for tarefa in tarefas %}
     <li>
-        {{ tarefa.nome }} - {{ tarefa.prazo }}
+        {{ tarefa.nome }} - {{ tarefa.prazo }} - {{ tarefa.status }}
+    </li>
     {% if tarefa.prazo == hoje  %} 
         <p>Entrega é hoje</p>
-    {% elif tarefa.prazo > hoje %}
-        <p>ATRASADA</p>
-    </li>
+    {% elif tarefa.prazo < hoje %}
+        <p>A entrega está atrasada</p>
     {% endif %}
-{% endfor %}
+    {% endfor %}
 </body>
 </html>
