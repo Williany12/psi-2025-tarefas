@@ -8,8 +8,7 @@
     <link href={% static 'app/css/estilo.css'%} rel="stylesheet">
 </head>
 <body>
-  {% comment %} Navegação {% endcomment %}
-<nav class="navbar navbar-expand-lg" style="background-color: #cce5ff;">
+<nav class="navbar navbar-expand-lg" style="background-color: #90c0f4ff;">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold text-primary ps-2" href="{% url 'index' %}">{{ blog.titulo }}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -29,7 +28,7 @@
 {%block content%}
 
 {%endblock content%}
-<footer style="background-color: #cce5ff;" class="py-3 mt-5">
+<footer style="background-color: #90c0f4ff;" class="py-3 mt-5">
   <div class="container">
     <div class="small text-center text-primary fst-italic">
       Copyright &copy; {{ blog.copyright }} 2025
