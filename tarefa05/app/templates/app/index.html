@@ -2,26 +2,28 @@
 {% load static %}
 {% block content %}
 
-<div class="row">
-    {% for post in post %}
-    <div class="col-md-4 mt-5">
-        <div class="card h-100">
-        <a href="{% url 'post' post.id %}">
-            <img src="{{ post.imagem.url }}" class="card-img-top" alt="{{ post.titulo }}">
-        </a>
-        <div class="card-body">
-            <a href="{% url 'post' post.id %}" style="text-decoration: none; color: inherit;">
-            <h5 class="card-title">{{ post.titulo }}</h5>
-            <p class="card-text"><small class="text-muted">{{ post.data }}</small></p>
-            </a>
-        </div>
-        </div>
-    </div>
-      {% endfor %}
-</div>
-  
+<div class="container mt-5 ms-0 ps-0">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-12 col-md-11">
 
-{% endblock content %}
+      {% for post in posts %}
+      <div class="post-preview mb-5 pb-3 border-bottom">
+        <a href="{% url 'post' post.id %}" class="text-decoration-none text-dark">
+          <h2 class="post-title fw-bold">{{ post.titulo }}</h2>
+          {% if post.subtitulo %}
+          <h5 class="post-subtitle text-muted">{{ post.subtitulo }}</h5>
+          {% endif %}
+        </a>
+        <p class="post-meta mt-2 text-secondary">
+          Postado por <strong>{{ post.autor }}</strong> em {{ post.data|date:"d M Y" }}
+        </p>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+{%endblock content%}
 
 
   

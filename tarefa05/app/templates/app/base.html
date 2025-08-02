@@ -8,25 +8,35 @@
     <link href={% static 'app/css/estilo.css'%} rel="stylesheet">
 </head>
 <body>
+  {% comment %} Navegação {% endcomment %}
+<nav class="navbar navbar-expand-lg" style="background-color: #cce5ff;">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-primary ps-2" href="{% url 'index' %}">{{ blog.titulo }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active text-primary fw-semibold pe-4" aria-current="page" href="{% url 'index' %}">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 {%block content%}
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
 {%endblock content%}
+<footer style="background-color: #cce5ff;" class="py-3 mt-5">
+  <div class="container">
+    <div class="small text-center text-primary fst-italic">
+      Copyright &copy; {{ blog.copyright }} 2025
+    </div>
+  </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

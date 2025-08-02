@@ -4,15 +4,15 @@
 
 {%block content%}
 <div class="container">
-    <h1 class="mt-3">{{post.titulo}}</h1>
+<h1 class="mt-4 mb-3 fw-bold justify-text-start text-primary display-5">{{ posts.titulo }}</h1>
+<hr class=" mb-4" style="width: 150px; border-top: 3px solid #2f93feff;">
     <div class="row mt-5">
         <div class="col-md-6 mb-5">
-                <img src="{{ post.imagem.url }}" class="img-fluid">
+            <img src="{{ posts.imagem.url }}" class="img-fluid">
         </div>
         <div class="col-md-6 mb-5 pt-5">
-                <p>{{ post.texto }}</p>
-                <p><b>Data de postagem<b> - {{ post.data }}</p>
-            </a>
+            <p>{{ posts.texto }}</p>
+            <p><b>Data de publicação<b> - {{ posts.data }}</p>
         </div>
     </div>
 </div>
